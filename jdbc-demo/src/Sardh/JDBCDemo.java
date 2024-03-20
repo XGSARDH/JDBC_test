@@ -7,7 +7,7 @@ import java.sql.Statement;
 public class JDBCDemo {
     public static void main(String[] args)throws Exception {
         //1. 注册驱动
-        Class.forName("com.mysql.jdbc.Driver");
+        Class.forName("com.mysql.cj.jdbc.Driver");
 
         //2. 获取连接
         String url = "jdbc:mysql://127.0.0.1:3306/db1";
@@ -16,7 +16,7 @@ public class JDBCDemo {
         Connection conn = DriverManager.getConnection(url,username,password);
 
         //3. 定义sql语句
-        String sql = "update account set money = 2000 where id = 2";
+        String sql = "update account set money = 3000 where id = 2";
 
         //4. 获取执行sql的对象 Startment
         Statement stmt = conn.createStatement();

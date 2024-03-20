@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="GROUP_BY_SEVERITY" value="true" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f78d186-5f17-43ed-bef4-156517f8c59f" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JDBC_Test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jdbc-demo/jdbc-demo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jdbc-demo/lib/mysql-connector-j-8.3.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jdbc-demo/src/Sardh/JDBCDemo.java" afterDir="false" />
+    <list default="true" id="1f78d186-5f17-43ed-bef4-156517f8c59f" name="变更" comment="搞定了一个简单的JDBC基本操作示例">
+      <change afterPath="$PROJECT_DIR$/jdbc-demo/src/Sardh/JDBCDemo3_Connection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdbc-demo/src/Sardh/JDBCDemo4_Statement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdbc-demo/src/Sardh/JDBCDemo5_ResultSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdbc-demo/jdbc-demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/jdbc-demo/jdbc-demo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdbc-demo/src/Sardh/JDBCDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/jdbc-demo/src/Sardh/JDBCDemo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,14 +24,24 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="AnnotationType" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2dtRyCSx9cHX7lp4xDrqCLp9R5G" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -44,6 +53,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -54,9 +67,10 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "模块",
+    "project.structure.last.edited": "项目",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -65,17 +79,29 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Sardh" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\SARDH\IdeaProjects\JDBC_Test\jdbc-demo\lib" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\SARDH\IdeaProjects\JDBC_Test\test1\src" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Sardh" />
+    </key>
   </component>
-  <component name="RunManager" selected="应用程序.Sardh.JDBCDemo">
-    <configuration name="JDBCDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="JDBCDemo" />
-      <module name="test1" />
+  <component name="RunManager" selected="JUnit.JDBCDemo5_ResultSet.testResultSet">
+    <configuration name="JDBCDemo3_Connection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Sardh.JDBCDemo3_Connection" />
+      <module name="jdbc-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Sardh.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -93,10 +119,61 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="JDBCDemo4_Statement.testDDL" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jdbc-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Sardh.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Sardh" />
+      <option name="MAIN_CLASS_NAME" value="Sardh.JDBCDemo4_Statement" />
+      <option name="METHOD_NAME" value="testDDL" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JDBCDemo4_Statement.testDML" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jdbc-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Sardh.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Sardh" />
+      <option name="MAIN_CLASS_NAME" value="Sardh.JDBCDemo4_Statement" />
+      <option name="METHOD_NAME" value="testDML" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JDBCDemo5_ResultSet.testResultSet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jdbc-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Sardh.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Sardh" />
+      <option name="MAIN_CLASS_NAME" value="Sardh.JDBCDemo5_ResultSet" />
+      <option name="METHOD_NAME" value="testResultSet" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.JDBCDemo5_ResultSet.testResultSet" />
+        <item itemvalue="JUnit.JDBCDemo4_Statement.testDDL" />
+        <item itemvalue="JUnit.JDBCDemo4_Statement.testDML" />
+        <item itemvalue="应用程序.JDBCDemo3_Connection" />
         <item itemvalue="应用程序.Sardh.JDBCDemo" />
-        <item itemvalue="应用程序.JDBCDemo" />
       </list>
     </recent_temporary>
   </component>
@@ -108,8 +185,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710825642390</updated>
-      <workItem from="1710825643848" duration="4623000" />
+      <workItem from="1710825643848" duration="14355000" />
+      <workItem from="1710922088649" duration="1682000" />
     </task>
+    <task id="LOCAL-00001" summary="搞定了一个简单的JDBC基本操作示例">
+      <created>1710831582392</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710831582392</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,5 +211,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="搞定了一个简单的JDBC基本操作示例" />
+    <option name="LAST_COMMIT_MESSAGE" value="搞定了一个简单的JDBC基本操作示例" />
   </component>
 </project>
